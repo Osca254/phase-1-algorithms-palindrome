@@ -1,25 +1,31 @@
-const word = "abba"
+
+//create a palindrome
 function isPalindrome(word) {
   // Write your algorithm here
-  if (word==word){
-    return true;
-  }
-  else if(word !==word){
-    return false;
-  }
-console.log(isPalindrome(word))
+  //check if the word contains a palindrome
+  const palindrome = word.split("").reverse().join("");
+  const checkPalindrome = palindrome === word ? true : false;
+  return checkPalindrome;
 }
-isPalindrome('robot')
+
 /* 
   Add your pseudocode here
-  recall conditional statements
-  use if else statement 
-  concantnation too
-  for the last two tests we use else if statements
+  const palindrome=word.reverse
+  if (palindrome===word){
+    return true
+  }
+  else{
+    return false
+  }
 */
 
 /*
   Add written explanation of your solution here
+  get the word from the function
+  reverse the word
+  compare the reversed word to the original word
+  if word is equal to the original returns true
+  else returns false
 */
 
 // You can run `node index.js` to view these console logs
@@ -28,7 +34,7 @@ if (require.main === module) {
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
 
-  console.log("ab");
+  console.log("");
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
